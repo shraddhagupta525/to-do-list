@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./landing.css";
-
+import { Link } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Landing() {
   return (
@@ -25,7 +26,6 @@ export default function Landing() {
             </li>
           </ul>
         </div>
-        
 
         <div className="landing-content">
           <div className="landing-left">
@@ -35,7 +35,9 @@ export default function Landing() {
                 Manage your day efficiently with Task Ease at your side.
               </span>
             </h1>
-            <button className="get-started">Get Started</button>
+            <Link to="/home" className="get-started">
+            Get Started <FaArrowRightLong size={18} className="arrow" />
+          </Link>
           </div>
           <div className="landing-img">
             <img src="src/assets/landing1.png" alt="landing_image" />

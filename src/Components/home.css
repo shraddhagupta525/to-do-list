@@ -1,0 +1,10 @@
+.home{
+    display: flex;
+    flex-direction: row;
+}
+.side-panel{
+    width: 20%;
+    background-color: #e9e3e3;
+    padding: 20px;
+
+}

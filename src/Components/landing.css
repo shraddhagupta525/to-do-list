@@ -1,7 +1,7 @@
 .nav-list a{
     color: white;
 }
-ul{
+.nav-bar-list{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -15,6 +15,20 @@ ul{
     padding: 1%;
     font-size: large;
     color: white;
+}
+
+.landing::after{
+    content: ".";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 15%;
+    left: 25%;
+    border-radius: 50%;
+    background: linear-gradient(   rgb(4, 186, 186),rgb(181, 241, 139));
+    z-index: -1;
+    opacity: .5;
+    filter: blur(20px);
 }
 
 .landing-content{
@@ -49,20 +63,40 @@ ul{
     margin-top: -8%;
     
 }
-button{
+.get-started{
     background-color:teal;
     color: white;
     border: none;
+    width: fit-content;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 45px;
     transition: background-color 0.3s ease;
+}
 
+.arrow{
+    animation: swipe-arrow 0.8s ease infinite;
+    font-weight: bold;
+}
+
+@keyframes swipe-arrow {
+    0% {
+        transform: translateX(0);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 
